@@ -1,0 +1,62 @@
+<!DOCTYPE='html'>
+<html> <title>JS EXECTION VISUALISER</title>
+  <style>
+    .hidden:none;
+  </style>
+  <body> 
+    
+  <div class="container"> <div class="heading"> <h1> This is a Java Script Exection Visualiser</h1
+  <div class="block1"><pre>This contains the code visualisation fo the below code.</pre>
+  <code>  function a() {
+    console.log('First')
+    b()
+    console.log('Second' )
+  
+  
+  }
+  funtion b() {
+    console.log('third')
+    c()
+    console.log('fourth')
+    
+  }
+   function c(){
+    console.log('Finished')
+   } 
+   executing = a()
+    executing()
+  </code>
+
+    <button id="button" onclick="popfunc()">Show</button>
+    <div id="visuals" class="hidden" >
+      <table>
+        <tr> GLOBAL</tr>
+        <tr> a()</tr>
+        <tr> b()</tr>
+        <tr> c()</tr>
+        <tr> console.log</tr>
+        <tr> return a</tr>
+        <tr> return b</tr>
+        <tr> return c</tr>
+        
+      </table>
+    
+  
+  
+  </div>
+  
+  </div>
+    <script> 
+    function popfunc() {
+      visuals = document.getElementById("button");
+      if (visuals.style.display === "none"){
+        box.style.display = "block"
+      }else(){
+        box.style.display = "none"
+      
+      
+    }</script>
+  </body>
+
+
+</html>
