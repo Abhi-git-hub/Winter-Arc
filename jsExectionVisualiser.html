@@ -1,62 +1,79 @@
-<!DOCTYPE='html'>
-<html> <title>JS EXECTION VISUALISER</title>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>JS Execution Visualizer</title>
+
   <style>
-    .hidden:none;
+    .hidden {
+      display: none;
+    }
   </style>
-  <body> 
-    
-  <div class="container"> <div class="heading"> <h1> This is a Java Script Exection Visualiser</h1
-  <div class="block1"><pre>This contains the code visualisation fo the below code.</pre>
-  <code>  function a() {
-    console.log('First')
-    b()
-    console.log('Second' )
-  
-  
-  }
-  funtion b() {
-    console.log('third')
-    c()
-    console.log('fourth')
-    
-  }
-   function c(){
-    console.log('Finished')
-   } 
-   executing = a()
-    executing()
-  </code>
+</head>
 
-    <button id="button" onclick="popfunc()">Show</button>
-    <div id="visuals" class="hidden" >
-      <table>
-        <tr> GLOBAL</tr>
-        <tr> a()</tr>
-        <tr> b()</tr>
-        <tr> c()</tr>
-        <tr> console.log</tr>
-        <tr> return a</tr>
-        <tr> return b</tr>
-        <tr> return c</tr>
-        
-      </table>
-    
-  
-  
+<body>
+
+  <div class="container">
+
+    <div class="heading">
+      <h1>This is a JavaScript Execution Visualizer</h1>
+    </div>
+
+    <div class="block1">
+
+      <pre>
+This contains the code visualization for the below code.
+      </pre>
+
+      <pre><code>
+function a() {
+  console.log('First');
+  b();
+  console.log('Second');
+}
+
+function b() {
+  console.log('Third');
+  c();
+  console.log('Fourth');
+}
+
+function c() {
+  console.log('Finished');
+}
+
+a();
+      </code></pre>
+
+      <button id="button" onclick="popfunc()">Show / Hide</button>
+
+      <div id="visuals" class="hidden">
+
+        <table>
+          <tr><td>GLOBAL</td></tr>
+          <tr><td>a()</td></tr>
+          <tr><td>b()</td></tr>
+          <tr><td>c()</td></tr>
+          <tr><td>console.log()</td></tr>
+          <tr><td>return c</td></tr>
+          <tr><td>return b</td></tr>
+          <tr><td>return a</td></tr>
+        </table>
+
+      </div>
+
+    </div>
+
   </div>
-  
-  </div>
-    <script> 
+
+  <script>
     function popfunc() {
-      visuals = document.getElementById("button");
-      if (visuals.style.display === "none"){
-        box.style.display = "block"
-      }else(){
-        box.style.display = "none"
-      
-      
-    }</script>
-  </body>
+      const visuals = document.getElementById("visuals");
 
+      visuals.classList.toggle("hidden");
+    }
+  </script>
+
+</body>
 
 </html>
